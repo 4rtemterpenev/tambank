@@ -1,0 +1,52 @@
+.telegram
+  padding-top: 80px
+  padding-bottom: 80px
+  a
+    text-decoration: none
+  &-block
+    border-radius: 10px
+    background-color: #ededed
+    padding: 50px 30px 50px 30px
+    &__info
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+    &__image
+      margin-bottom: 20px
+    &__title
+      font-size: 42px
+      line-height: 50px
+      color: #000
+      font-family: 'Open Sans', sans-serif
+      margin-bottom: 20px
+    &__subtitle
+      font-size: 18px
+      line-height: 30px
+      color: #575757
+      font-family: 'Open Sans', sans-serif
+.telegram-strong
+  color: #0080ff
+  font-weight: 600
+
+@media (max-width: 1000px)
+  .telegram-block
+    &__title
+      font-size: 30px
+      line-height: 36px
+    &__subtitle
+      font-size: 16px
+      line-height: 22px
+
+@media (max-width: 750px)
+  .telegram-block
+    &__title
+      font-size: 22px
+      line-height: 28px
+
+@media (max-width: 550px)
+  .telegram-block
+    text-align: center
+    &__title
+      font-size: 20px
+      line-height: 22px

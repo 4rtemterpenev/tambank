@@ -128,3 +128,52 @@ if (dropdownTitle)
   dropdownTitle.addEventListener('click', toggleMenuDisplay);
 
 dropdownOptions.forEach(option => option.addEventListener('click', handleOptionSelected));
+
+
+$("#cphone").mask("+7 (000) 000-00-00");
+
+$.validator.addMethod("pwcheckallowedchars", function (value) {
+  return /^[a-zA-Zа-яА-я-()ёЁ ]+$/.test(value)
+}, "Недопустимое значение");
+
+$('#form-block__action').validate({
+  rules: {
+    cname: {
+      required: true,
+      minlength: 2,
+      pwcheckallowedchars: true
+    },
+    cphone: {
+      required: true,
+      minlength: 18
+    },
+  },
+  messages: {
+    cname: {
+      required: 'Поле не заполнено',
+      minlength: 'Минимум 2 символа'
+    },
+    cphone: {
+      required: 'Поле не заполнено',
+      minlength: 'Введите номер полностью'
+    },
+  },
+  onkeyup: function (element) {
+    let submit = document.querySelector('#form-block__action .form-block__button')
+
+    if ($('#form-block__action').validate().checkForm()) {
+      submit.classList.remove('disabled')
+    } else {
+      submit.classList.add('disabled')
+    }
+    var excludedKeys = [
+      16, 17, 18, 20, 35, 36, 37,
+      38, 39, 40, 45, 144, 225
+    ];
+    if (event.which === 9 && this.elementValue(element) === "" || $.inArray(event.keyCode, excludedKeys) !== -1) {
+      return;
+    } else if (element.name in this.submitted || element.name in this.invalid) {
+      this.element(element);
+    }
+  },
+});
