@@ -1,0 +1,45 @@
+.modal
+  position: relative
+  z-index: 1000
+  display: none
+  &.active
+    display: block
+  &-block
+    width: 100%
+    height: 100%
+    position: fixed
+    top: 0
+    left: 0
+    background-color: rgba(0,0,0,0.7)
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow-y: auto 
+    &__window
+      width: 40%
+      background-color: #fff
+      padding: 80px 10px 80px 10px
+      max-height: calc(100% - 120px)
+      overflow: auto
+    &__wrapper
+      width: 90%
+      margin: 0 auto
+    &__exit
+      position: absolute
+      right: 30px
+      top: 30px
+      cursor: pointer
+
+  
+@media (max-width: 1000px)
+  .modal
+    &-block
+      &__window
+        width: 70%
+
+@media (max-width: 550px)
+  .modal
+    &-block
+      &__window
+        width: 95%
+        padding: 50px 10px 50px 10px

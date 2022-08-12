@@ -1,0 +1,63 @@
+*
+  box-sizing: border-box
+  outline: 0 !important
+  margin: 0
+  padding: 0
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  -webkit-text-size-adjust: 100%
+  outline-offset: 0 !important
+  opacity: 1
+
+.wrap
+  width: 1200px
+  margin: 0 auto
+.strong
+  font-family: Arial, Helvetica, sans-serif
+  font-size: 40px
+  line-height: 46px
+  color: red
+  font-weight: bold
+.heading
+  font-family: 'Open Sans', sans-serif
+  font-size: 30px
+  line-height: 36px
+  margin-bottom: 70px
+  margin-left: 60px
+
+@media (min-width: 992px)
+  *
+    scrollbar-color: #d6d6d6 #F4F5F8
+    scrollbar-width: thin
+    &::-webkit-scrollbar
+      width: 5px
+      height: 8px
+      background-color: #F4F5F8
+    &::-webkit-scrollbar-thumb
+      background-color: #d6d6d6
+      border-radius: 3px
+    &::-webkit-scrollbar-track
+      background-color: darkgrey
+  .hero-block__order:hover
+    background-color: #e70e00
+    transition: 0.3s
+  .services-block__btn a:hover
+    background-color: #e70e00
+    transition: 0.3s
+  .partners-block__image img:hover
+    transform: scale(1.3)
+    transition: 0.5s
+@media (max-width: 1250px)
+  .wrap
+    width: 90%
+
+@media (max-width: 900px)
+  .heading
+    font-size: 24px
+@media (max-width: 600px)
+  .heading
+    font-size: 22px
+    margin-left: 0
+    text-align: center
+    margin-bottom: 45px

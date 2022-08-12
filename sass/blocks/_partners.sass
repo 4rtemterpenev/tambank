@@ -1,0 +1,47 @@
+.partners
+  padding: 40px 0px 40px 0px 
+  background-color: #e1e1e1 
+  margin-bottom: 80px
+  &-block
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: center
+    &__image
+      display: block
+      margin-right: 40px
+      width: 80px
+      img
+        width: 100%
+        transition: 0.5s
+        align-items: center
+        display: flex
+        &:hover
+          transform: scale(1.3)
+          transition: 0.5s
+    // &__image.big
+    //   display: block
+    //   width: 115px
+    //   height: 115px
+    //   margin-right: 40px
+
+@media (max-width: 1000px)
+  .partners
+    &-block
+      &__image
+        margin-bottom: 20px
+
+
+@media (max-width: 400px)
+  .partners
+    &-block
+      &__image
+        width: 60px
+
+@media (max-width: 370px)
+  .partners
+    &-block
+      &__image
+        &.hide
+          display: none

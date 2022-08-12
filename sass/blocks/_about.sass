@@ -1,0 +1,70 @@
+.about
+  padding-bottom: 130px
+  &-block
+    border-radius: 10px
+    background: rgb(255,211,216)
+    background: linear-gradient(180deg, rgba(255,211,216,1) 0%, rgba(246,246,246,1) 100%)
+    display: flex
+    flex-direction: row
+    padding-top: 50px
+    padding-bottom: 50px
+    &__image
+      width: 40%
+      display: flex
+      align-items: center
+      justify-content: center
+      img
+        width: 60%
+    &__info
+      width: 55%
+      p
+        font-size: 16px
+        color: #575757
+        font-family: 'Open Sans', sans-serif
+        line-height: 24px
+    &__heading
+      color: #000
+      font-size: 34px
+      line-height: 40px
+      font-family: 'Open Sans', sans-serif
+      font-weight: 400px
+      width: 500px
+      margin-bottom: 30px
+      display: block
+
+@media(max-width: 1000px)
+  .about
+    &-block
+      &__heading
+        font-size: 24px
+        line-height: 30px
+        width: 100%
+      &__info p
+        font-size: 16px
+        line-height: 24px
+@media(max-width: 700px)
+  .about
+    padding-bottom: 80px
+    &-block
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      &__image
+        width: 80%
+        margin-bottom: 20px
+        img
+          width: 80%
+      &__info
+        text-align: center
+        width: 100%
+@media(max-width: 500px)
+  .about
+    &-block
+      &__heading
+        font-size: 18px
+        line-height: 24px
+      &__info p
+        font-size: 16px
+        line-height: 20px
+      &__image
+        width: 100%
